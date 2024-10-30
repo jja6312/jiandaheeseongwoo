@@ -1,6 +1,6 @@
 
 document.querySelector("#check_item").addEventListener("click",()=>{
-	location.href="list.html";
+	location.href="list.php";
 });
 
 
@@ -34,7 +34,7 @@ const handOnSubmitRegistForm = async (e) => {
 			formData
 		);
 		console.log("등록이 완료되었습니다.");
-		location.href="list.html";
+		location.href="list.php";
 	} catch (e) {
 		console.log("등록이 완료되지 않았습니다.");
 	}

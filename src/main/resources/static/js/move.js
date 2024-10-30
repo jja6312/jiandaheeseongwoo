@@ -1,3 +1,3 @@
 $("#regist_item").click(() => {
-    location.href = "index.html";
+    location.href = "index.php";
 });
