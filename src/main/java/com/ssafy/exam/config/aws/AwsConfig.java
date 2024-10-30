@@ -26,12 +26,6 @@ public class AwsConfig {
 
     @Value("${aws.s3.endpoint}")
     private String endpoint;
-    @PostConstruct
-    public void init() {
-        System.out.println("accessKeyId:"+accessKeyId);
-        System.out.println("secretAccessKey:"+secretAccessKey);
-        System.out.println("region:"+region);
-    }
 
     @Bean
     public S3Client s3Client() {

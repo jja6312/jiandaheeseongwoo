@@ -10,6 +10,7 @@ axios.get("/api/doctor")
         var doctorTableRow = `
         <tr class="doctorRow">
         <td class="id">${doctor.doctorId}</td>
+        <td class="profileImageUrl"><img src="${doctor.profileImageUrl}" class="profileImage"></td>
         <td  class="name">${doctor.name}</td>
         <td  class="age">${doctor.age}</td>
         <td  class="specialtyCode">${doctor.specialtyCode}</td>

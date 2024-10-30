@@ -69,7 +69,7 @@ tbody{
     width:10%;
 }
 .tableTd2{
-    width:15%;
+    width:10%;
 }
 .tableTd3{
     width:10%;
@@ -78,13 +78,17 @@ tbody{
     width:15%;
 }
 .tableTd5{
-    width:20%;
+    width:15%;
 }
 .tableTd6{
     width:10%;
 }
 .tableTd7{
     width:20%;
+}
+
+.tableTdImage{
+    width:10%
 }
 
 .btn{
@@ -121,4 +125,10 @@ tbody{
     padding:5px;
     border:1px solid rgb(215, 213, 213);
     text-align: center;
+}
+
+.profileImage{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
 }
