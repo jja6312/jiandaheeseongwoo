@@ -16,11 +16,14 @@ CREATE TABLE doctor ( # doctor라는 이름의 테이블 생성. 컬럼은 아�
     FOREIGN KEY (specialty_code) REFERENCES specialty(specialty_code) # 외래키 컬럼이며, specialty_code로 이름을 짓는다. specialty 테이블의 specialty_code(기본키)를 참조한다.
 );
 
+alter table doctor modify column doctor_id int auto_increment;
+alter table doctor add column profile_image_url varchar(200);
+
 # specialty 테이블의 컬럼(specialty_code, specialty_name)별로 값(101, "심장내과")을 할당한 새로운 열 1행을 삽입합니다.
 insert into specialty(specialty_code, specialty_name) values(101, "심장내과"); 
 
 # doctor 테이블의 컬럼(doctor_id, name, age, specialty_code, experience_years)별로 값(1,"정지안",30,101,5)을 할당한 새로운 열 1행을 삽입합니다.
 insert into doctor(doctor_id, name, age, specialty_code, experience_years) values(1,"정지안",30,101,5);
 
-alter table doctor modify column doctor_id int auto_increment;
+
 

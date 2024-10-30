@@ -186,6 +186,14 @@ color:rgb(49, 96, 183);
   transition: border 0.3s;
 }
 
+.form-input-file{
+  width: 220px;
+  margin: 10px 0px;
+  padding: 10px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
 .form-input:focus {
   border-color: rgb(34, 63, 116)f;
   outline: none;

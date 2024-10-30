@@ -5,11 +5,11 @@
 <mapper namespace="com.ssafy.exam.model.dao.DoctorDao">
 
 <insert id="insertDoctor" parameterType="com.ssafy.exam.model.dto.Doctor">
-INSERT INTO doctor(doctor_id, name,age,specialty_code,experience_years) VALUES (#{doctorId} ,#{name},#{age},#{specialtyCode},#{experienceYears})
+INSERT INTO doctor(doctor_id, name,age,specialty_code,experience_years, profile_image_url) VALUES (#{doctorId} ,#{name},#{age},#{specialtyCode},#{experienceYears},#{profileImageUrl})
 </insert>
 
 <select id="selectAllDoctors" resultType="com.ssafy.exam.model.dto.Doctor">
-SELECT d.doctor_id, d.name, d.age, d.specialty_code, d.experience_years, j.specialty_name
+SELECT d.doctor_id, d.name, d.age, d.specialty_code, d.experience_years, j.specialty_name, d.profile_image_url
 	FROM doctor d 
 	JOIN specialty j 
 	ON d.specialty_code = j.specialty_code

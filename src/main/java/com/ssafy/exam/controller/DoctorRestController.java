@@ -2,16 +2,12 @@ package com.ssafy.exam.controller;
 
 import java.util.List;
 
+import com.ssafy.exam.dto.DoctorCreateRequest;
+import com.ssafy.exam.model.service.aws.AwsService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.ssafy.exam.model.dto.Doctor;
 import com.ssafy.exam.model.service.DoctorService;
@@ -21,19 +17,37 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/doctor")
+@RequiredArgsConstructor
 @Tag(name = "의사", description = "의사와 관련된 api들입니다.")
 public class DoctorRestController {
-	private DoctorService doctorService;
-	
-	//생성자 주입
-	public DoctorRestController(DoctorService doctorService) {
-		this.doctorService = doctorService;
-	}
+	private final DoctorService doctorService;
+	private final AwsService awsService;
+
 
 	// 의사 등록
 	@PostMapping
 	@Operation(summary = "의사 등록",description = "의사 정보를 등록합니다.")
-	public ResponseEntity<String> addDoctor(@RequestBody Doctor doctor) {
+	public ResponseEntity<String> addDoctor(@ModelAttribute DoctorCreateRequest doctorCreateRequest) {
+		String imageUrl = awsService.uploadS3Image(doctorCreateRequest.getImage());
+//		private int doctorId;
+//		private String name;
+//		private int age;
+//		private int specialtyCode;
+//		private int experienceYears;
+//		private String specialtyName;
+//		private String profileImageUrl;
+
+		Doctor doctor = Doctor.builder()
+				.doctorId(doctorCreateRequest.getDoctorId())
+				.name(doctorCreateRequest.getName())
+				.age(doctorCreateRequest.getAge())
+				.specialtyCode(doctorCreateRequest.getSpecialtyCode())
+				.experienceYears(doctorCreateRequest.getExperienceYears())
+				.specialtyName(doctorCreateRequest.getSpecialtyName())
+				.profileImageUrl(imageUrl)
+				.build();
+
+
 		boolean isSuccessAdd = doctorService.addDoctor(doctor);
 		return isSuccessAdd
 				? ResponseEntity.status(HttpStatus.CREATED).body("Doctor added successfully")
