@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+select {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrapper {
+  display: flex;
+  min-width: 600px;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  margin: 50px;
+  flex-direction: column;
+}
+
+.aside {
+  width: 300px;
+  min-height: 100vh;
+  background-color: rgb(34, 63, 116);
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 40px;
+}
+
+.form-title {
+color:rgb(49, 96, 183);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.form-input-wrapper {
+  width: 400px;
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 220px;
+  margin: 10px 0px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+.form-input:focus {
+  border-color: rgb(34, 63, 116)f;
+  outline: none;
+}
+
+.form-btn {
+  background-color: rgb(34, 63, 116);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form-btn:hover {
+  background-color: #0056b3;
+}
+
+.list-title {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-weight:700;
+  padding: 30px;
+}
+
+.list-item {
+  color: white;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.list-item:hover {
+  cursor: pointer;
+  background-color: rgba(39, 92, 207, 0.5);
+  color: white;
+}
+
+.list-item-select {
+  background-color: white;
+  color: black;
+}
+
+.form-group{
+	width:350px;
+}

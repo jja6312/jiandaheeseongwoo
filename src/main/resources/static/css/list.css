@@ -1,0 +1,124 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+.bodyContainer{
+    display:flex;
+}
+
+.leftBody{
+    background-color:rgb(34, 63, 116);
+    width: 300px;
+    height:100vh;
+}
+
+.rightBody{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+
+    padding:50px;
+}
+
+.title{
+color:rgb(49, 96, 183);
+    font-size:24px;
+    font-weight: 700;
+
+}
+
+.hrContainer{
+    display:flex;
+    margin-top:5px;
+}
+
+.hr1{
+    width:9%;
+    height:0.1px;
+    border: 1.5px solid rgb(22, 103, 255);
+}
+.hr2{
+    width:91%;
+    height:0.1px;
+    border: 1.5px solid rgb(198, 198, 198);
+}
+
+
+.tableContainer{
+    margin-top:30px;
+    font-size:16px;
+    color:rgb(38, 39, 42);
+    width:100%;
+}
+
+.table{
+    width:100%;
+    text-align: center;
+}
+
+tbody{
+    color:gray;
+}
+
+.table td {
+    padding: 10px 20px; /* 상하 간격 10px, 좌우 간격 20px */
+}
+
+.tableTd1{
+    width:10%;
+}
+.tableTd2{
+    width:15%;
+}
+.tableTd3{
+    width:10%;
+}
+.tableTd4{
+    width:15%;
+}
+.tableTd5{
+    width:20%;
+}
+.tableTd6{
+    width:10%;
+}
+.tableTd7{
+    width:20%;
+}
+
+.btn{
+    border:none;
+    padding:5px;
+    border-radius: 15%;
+    color:white;
+    cursor:pointer;
+}
+
+.editBtn{
+    background-color:rgb(34, 63, 116);
+}
+
+.deleteBtn{
+    color: rgb(255, 100, 100);
+    border: 1px solid rgb(255, 100, 100);
+}
+
+.editCompleteBtn{
+    background-color:rgb(48, 190, 91);
+
+}
+
+.cancleBtn{
+    color: rgb(209, 118, 118);
+    border: 1px solid rgb(255, 100, 100);
+
+}
+
+.editInput{
+    width:100%;
+    font-size:16px;
+    padding:5px;
+    border:1px solid rgb(215, 213, 213);
+    text-align: center;
+}

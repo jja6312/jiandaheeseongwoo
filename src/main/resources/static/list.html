@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/list.css" rel="stylesheet">
+        <link rel="stylesheet" href="./styles.css" />
+    
+    <title>신성우 + 정지안 = ?</title>
+</head>
+<body>
+
+    <div class="bodyContainer">
+         <aside class="aside">
+        <div class="list list-title">의사 관련 업무</div>
+        <div class="list list-item " id="regist_item">의사 등록</div>
+        <div class="list list-item list-item-select" id="check_item">의사 조회</div>
+      </aside>
+        <div class="rightBody">
+            <span class="title">의사 목록</span>
+            <div class="hrContainer">
+                <div class="hr1"></div>
+                <div class="hr2"></div>
+            </div>
+        
+            <div class="tableContainer">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td class="tableTd1">번호</td>
+                        <td class="tableTd2">이름</td>
+                        <td class="tableTd3">나이</td>
+                        <td class="tableTd5">전공코드/전공명</td>
+                        <td class="tableTd6">경력</td>
+                        <td class="tableTd7">수정</td>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>정지안</td>
+                        <td>29</td>
+                        <td>100</td>
+                        <td>의예과</td>
+                        <td>20</td>
+                        <td>
+                            <button class="btn editBtn">수정</button>
+                            <button class="btn deleteBtn">삭제</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="./list/getAllDoctors.js"></script>
+<script src="./list/editDoctor.js"></script>
+<script src="./list/deleteDoctor.js"></script>
+<script src="./js/editBtn.js"></script>
+<script src="./js/cancleBtn.js"></script>
+<script src="./js/move.js"></script>
+</body>
+</html>

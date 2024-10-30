@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>신성우 + 정지안 = ?</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="./css/list.css" />
+  <style>
+    /* 라벨과 인풋을 한 줄에 배치하는 스타일 */
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      width: 80px; /* 라벨의 고정 너비 */
+      margin-right: 10px;
+    }
+
+    .form-group input, select {
+      flex: 1; /* 입력 필드가 남은 공간을 차지하도록 */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <aside class="aside">
+      <div class="list list-title">의사 관련 업무</div>
+      <div class="list list-item list-item-select" id="regist_item">의사 등록</div>
+      <div class="list list-item" id="check_item">의사 조회</div>
+    </aside>
+
+    <main class="main">
+      <div class="form-title">의사 등록</div>
+      <div class="hrContainer">
+        <div class="hr1"></div>
+        <div class="hr2"></div>
+      </div>
+
+      <div class="form-wrapper">
+        <div class="form" id="regist_form">
+          
+          <div class="form-group">
+            <label for="doctor_name">이름:</label>
+            <input class="form-input" id="doctor_name" type="text" placeholder="이름" value="" />
+          </div>
+
+          <div class="form-group">
+            <label for="doctor_age">나이:</label>
+            <input class="form-input" id="doctor_age" type="number" placeholder="나이" value="" />
+          </div>
+
+          <div class="form-group">
+            <label for="doctor_specialty_code">전공코드:</label>
+            <select id="doctor_specialty_code" class="form-input" value="">
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="doctor_experience_years">경력:</label>
+            <input class="form-input" id="doctor_experience_years" type="number" placeholder="경력" value="" />
+          </div>
+
+          <button class="form-btn" id="regist_btn">등록</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="index.js"></script>
+  <script src="getAllSpecilties.js"></script>
+</body>
+</html>
