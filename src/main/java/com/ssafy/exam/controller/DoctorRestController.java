@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.ssafy.exam.dto.DoctorCreateRequest;
 import com.ssafy.exam.model.service.aws.AwsService;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,11 +17,12 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/doctor")
-@RequiredArgsConstructor
 @Tag(name = "의사", description = "의사와 관련된 api들입니다.")
 public class DoctorRestController {
-	private final DoctorService doctorService;
-	private final AwsService awsService;
+	@Autowired
+	private DoctorService doctorService;
+	@Autowired
+	private AwsService awsService;
 
 
 	// 의사 등록
